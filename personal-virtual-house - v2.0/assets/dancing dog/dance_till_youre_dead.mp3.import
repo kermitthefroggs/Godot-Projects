@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://67axq78evikw"
+path="res://.godot/imported/dance_till_youre_dead.mp3-f7cb7c3876aa8afd1e9c91ec0fcbc384.mp3str"
+
+[deps]
+
+source_file="res://assets/dancing dog/dance_till_youre_dead.mp3"
+dest_files=["res://.godot/imported/dance_till_youre_dead.mp3-f7cb7c3876aa8afd1e9c91ec0fcbc384.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

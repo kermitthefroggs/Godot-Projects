@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://1mdpk28ykepw"]
+
+[ext_resource type="PackedScene" uid="uid://cku5ij5cyfrf5" path="res://scenes/main.tscn" id="1_cvpoc"]
+[ext_resource type="Script" uid="uid://buy18jkvccrbp" path="res://scripts/camera_main.gd" id="1_gtx3x"]
+[ext_resource type="Shader" uid="uid://73exhkrprx7c" path="res://shaders/dithering.gdshader" id="1_tmlye"]
+[ext_resource type="Texture2D" uid="uid://cm4etkj75e5vn" path="res://shaders/psxdither.png" id="2_gtx3x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b05li"]
+shader = ExtResource("1_tmlye")
+shader_parameter/color_depth = 24.0
+shader_parameter/dithering_pattern_texture = ExtResource("2_gtx3x")
+
+[node name="Node" type="Node"]
+script = ExtResource("1_gtx3x")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_b05li")
+offset_right = 920.0
+offset_bottom = 760.0
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+audio_listener_enable_3d = true
+size = Vector2i(306, 253)
+render_target_update_mode = 4
+
+[node name="Main" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_cvpoc")]
