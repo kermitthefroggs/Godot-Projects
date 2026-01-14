@@ -1,7 +1,0 @@
-res://assets/dancing dog/default_bus_layout.tres
-res://scenes/main.tscn
-res://assets/textures/floor_tiles.tres
-res://scripts/main.gd
-res://scripts/audioemittertv.gd
-res://scenes/Player.tscn
-res://scripts/camera_main.gd
